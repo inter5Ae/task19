@@ -6,10 +6,15 @@
 
 Console.Clear();
 Console.WriteLine($"Введите пятизначное число ...");
-string n = Console.ReadLine();
+int n = Convert.ToInt32(Console.ReadLine());
 
-  if (n[0] == n[4] && n[1] == n[3])
+int n1 = n / 10000;
+int n2 = n / 1000 % 10;
+int n3 = n / 10 % 10;
+int n4 = n % 10;
+
+  if (n1 == n4 && n2 == n3)
       Console.WriteLine($"Данное число является палиндромом");
   
   else 
-      Console.WriteLine($"Данное число не является палиндром");
+      Console.WriteLine($"Данное число не является палиндромом");
